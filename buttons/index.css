@@ -11,7 +11,7 @@
 :root {
   --width: 150px;
   --height: 40px;
-  --cyan: red;
+  --red: red;
   --white: #ffffff;
 }
 
@@ -41,7 +41,7 @@ a{
   display: block;
   text-align: center;
   overflow: hidden;
-  color: var(--cyan);
+  color: var(--red);
   z-index: 1;
 }
 
@@ -51,7 +51,7 @@ a{
   position: absolute;
   width: 2rem;
   height: 2rem;
-  background-color: var(--cyan);
+  background-color: var(--red);
   left: -2rem;
   top: 50%;
   border-radius: 50%;
@@ -60,7 +60,7 @@ a{
 
 .btn:hover{
   color: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--red);
   transition: border .1s;
   transition-delay: .5s;
 }

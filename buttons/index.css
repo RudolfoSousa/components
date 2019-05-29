@@ -1,3 +1,4 @@
+/* Default */
 *{
   margin: 0;
   padding: 0;
@@ -13,17 +14,16 @@
   --height: 40px;
   --red: red;
   --white: #ffffff;
+  --black: #000000;
+  --green: green;
 }
 
 body{
   background-color: #dedede;
 }
 
-.wrapp{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+.buttons{
+  padding: 15px;
 }
 
 a{
@@ -31,7 +31,8 @@ a{
   text-decoration: none;
 }
 
-.btn{
+.btn,
+.btn2{
   width: var(--width);
   height: var(--height);
   font-size: 12px;
@@ -43,8 +44,11 @@ a{
   overflow: hidden;
   color: var(--red);
   z-index: 1;
+  margin: 15px 0;
 }
+/* End Default */
 
+/* Button 1 */
 .btn:after,
 .btn:before{
   content: "";
@@ -82,3 +86,55 @@ a{
     height: 37rem;
   }
 }
+/* End Button 1 */
+
+/* Button 2 */
+.btn2{
+  background-color: var(--green);
+  color: var(--white);
+  position: relative;
+}
+.btn2:after{
+  content: "";
+  position: absolute;
+  background-color: var(--white);
+  width: calc(var(--width) * 1.5);
+  left: calc(var(--width) + 200px);
+  height: var(--height);
+  top: 50%;
+  transform: translate(-50%, -50%) skewX(45deg);
+}
+
+.btn2:hover:after{
+  animation: toLeft2 .8s both;
+}
+.btn2:hover{
+  animation: colorGreen .8s both;
+}
+
+@keyframes toLeft2 {
+  0%{
+    left: calc(var(--width) + 200px);
+  }
+  50%{
+    left: 50%;
+    width: calc(var(--width) * 2);
+  }
+  100%{
+    left: 50%;
+    width: 0;
+  }
+}
+
+@keyframes colorGreen {
+  0%{
+    color: var(--white);
+  }
+  50%{
+    color: var(--green);
+  }
+  100%{
+    color: var(--white);
+  }
+}
+/* End Button 2 */

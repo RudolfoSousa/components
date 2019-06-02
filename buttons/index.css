@@ -22,6 +22,14 @@ body{
   background-color: #dedede;
 }
 
+.wrapp{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .buttons{
   padding: 15px;
 }
@@ -31,9 +39,7 @@ a{
   text-decoration: none;
 }
 
-.btn,
-.btn2,
-.btn3{
+.btn{
   width: var(--width);
   height: var(--height);
   font-size: 12px;
@@ -43,36 +49,36 @@ a{
   display: block;
   text-align: center;
   overflow: hidden;
-  color: var(--red);
+  color: var(--black);
   z-index: 1;
   margin: 15px 0;
 }
-/* End Default */
-
-/* Button 1 */
 .btn:after,
 .btn:before{
   content: "";
   position: absolute;
+}
+/* End Default */
+
+/* Button 1 */
+.btn1:after{
   width: 2rem;
   height: 2rem;
-  background-color: var(--red);
+  background-color: var(--green);
   left: -2rem;
   top: 50%;
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
 
-.btn:hover{
+.btn1:hover{
   color: var(--white);
-  border: 1px solid var(--red);
-  transition: border .1s;
-  transition-delay: .5s;
+  transition: color .1s;
+  transition-delay: .4s;
 }
 
-.btn:hover:after{
+.btn1:hover:after{
   animation: fromLeft .8s both;
-  border: 1px solid currentColor;
 }
 
 @keyframes fromLeft {
@@ -93,11 +99,8 @@ a{
 .btn2{
   background-color: var(--green);
   color: var(--white);
-  position: relative;
 }
 .btn2:after{
-  content: "";
-  position: absolute;
   background-color: var(--white);
   width: calc(var(--width) * 1.5);
   left: calc(var(--width) + 200px);
@@ -140,54 +143,71 @@ a{
 }
 /* End Button 2 */
 
-/* Button 3 */
+/*Button 3*/
 .btn3{
+  border-bottom: 1px solid var(--green);
   color: var(--black);
-  border: 1px solid currentColor;
-  position: relative;
 }
-.wave1,
-.wave2,
-.wave3{
-  position: absolute;
+.btn3:after{
+  width: var(--width);
+  height: 1px;
   background-color: var(--green);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 120%;
+  left: 0;
+  top: 100%;
 }
-.wave1{
-  width: 15px;
-  height: 15px;
+.btn3:hover{
+  color: var(--white);
+  transition: color .2s;
+  transition-delay: .4s;
 }
-.wave2{
-  width: 25px;
-  height: 25px;
+.btn3:hover:after{
+  animation: toTop2 .8s both;
 }
-.wave3{
-  width: 40px;
-  height: 40px;
-}
-.btn3:hover .wave1{
-  animation: toCenter .8s both;
-}
-.btn3:hover .wave2{
-  animation: toCenter .8s both;
-  animation-delay: .1s;
-}
-.btn3:hover .wave3{
-  animation: toCenter .8s both;
-  animation-delay: .2s;
-}
-@keyframes toCenter {
+@keyframes toTop2 {
   0%{
-    left: 120%;
+    top: 100%;
   }
   50%{
-    left: 50%;
+    top: 0;
+    height: 1px;
   }
   100%{
-    left: 50%;
+    top: 0;
+    height: var(--height);
   }
 }
-/* End Button 3 */
+/*End Button 3*/
+
+/*Button 4*/
+.btn4:after{
+  width: var(--width);
+  height: var(--height);
+  border-top: 1px solid var(--green);
+  border-bottom: 1px solid var(--green);
+  left: 50%;
+  top: 50%;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+}
+.btn4:hover:after{
+  animation: toCenter2 .8s both;
+}
+.btn4:hover{
+  color: var(--white);
+  transition: color .2s;
+  transition-delay: .5s;
+}
+@keyframes toCenter2 {
+  50%{
+    height: 0px;
+  }
+  65%{
+    height: 0px;
+    background-color: inherit;
+  }
+  100%{
+    height: var(--height);
+    background-color: var(--green);
+  }
+}
+/*End Buttom 4*/

@@ -195,13 +195,13 @@ a{
 .btn4:hover{
   color: var(--white);
   transition: color .2s;
-  transition-delay: .6s;
+  transition-delay: .5s;
 }
 @keyframes toCenter2 {
   50%{
     height: 0px;
   }
-  75%{
+  65%{
     height: 0px;
     background-color: inherit;
   }

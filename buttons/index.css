@@ -52,6 +52,7 @@ a{
   color: var(--black);
   z-index: 1;
   margin: 15px 0;
+  cursor: pointer;
 }
 .btn:after,
 .btn:before{
@@ -158,7 +159,7 @@ a{
 .btn3:hover{
   color: var(--white);
   transition: color .2s;
-  transition-delay: .4s;
+  transition-delay: .45s;
 }
 .btn3:hover:after{
   animation: toTop2 .8s both;
@@ -211,3 +212,56 @@ a{
   }
 }
 /*End Buttom 4*/
+
+/* Button 5 */
+.btn5{
+  line-height: var(--height);
+}
+.btn5 a{
+  color: var(--black);
+}
+.btn5:before{
+  width: var(--width);
+  height: var(--height);
+  border: 1px solid var(--green);
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  box-sizing: border-box;
+}
+.btn5:hover:before{
+  animation: toCenter3 .8s both;
+}
+.btn5:hover{
+  color: var(--white);
+  transition: .3s;
+  transition-delay: .4s;
+}
+
+@keyframes toCenter3 {
+  0%{
+    width: var(--width);
+    height: var(--height);
+  }
+  25%{
+    width: 0px;
+    height: 0px;
+  }
+  50%{
+    width: 0px;
+    height: 0px;
+  }
+  75%{
+    width: var(--width);
+    height: var(--height);
+    background-color: var(--green);
+  }
+  100%{
+    width: var(--width);
+    height: var(--height);
+    background-color: var(--green);
+  }
+};
+
+
+/* Fim Button 5 */

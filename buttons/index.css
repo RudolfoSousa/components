@@ -22,6 +22,14 @@ body{
   background-color: #dedede;
 }
 
+.wrapp{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .buttons{
   padding: 15px;
 }
@@ -31,8 +39,7 @@ a{
   text-decoration: none;
 }
 
-.btn,
-.btn2{
+.btn{
   width: var(--width);
   height: var(--height);
   font-size: 12px;
@@ -49,26 +56,25 @@ a{
 /* End Default */
 
 /* Button 1 */
-.btn:after,
-.btn:before{
+.btn1:after{
   content: "";
   position: absolute;
   width: 2rem;
   height: 2rem;
-  background-color: var(--red);
+  background-color: var(--green);
   left: -2rem;
   top: 50%;
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
 
-.btn:hover{
+.btn1:hover{
   color: var(--white);
   transition: color .1s;
   transition-delay: .4s;
 }
 
-.btn:hover:after{
+.btn1:hover:after{
   animation: fromLeft .8s both;
 }
 
@@ -90,7 +96,6 @@ a{
 .btn2{
   background-color: var(--green);
   color: var(--white);
-  position: relative;
 }
 .btn2:after{
   content: "";
@@ -136,3 +141,46 @@ a{
   }
 }
 /* End Button 2 */
+
+/*Button 3*/
+.btn3{
+  border-bottom: 1px solid var(--green);
+  color: var(--black);
+}
+.btn3:after{
+  content: "";
+  position: absolute;
+  width: var(--width);
+  height: 1px;
+  background-color: var(--green);
+  left: 0;
+  top: 100%;
+}
+.btn3:hover{
+  color: var(--white);
+  transition: color .2s;
+  transition-delay: .4s;
+}
+.btn3:hover:after{
+  animation: toTop2 .8s both;
+}
+@keyframes toTop2 {
+  0%{
+    top: 100%;
+  }
+  50%{
+    top: 0;
+    height: 1px;
+  }
+  100%{
+    top: 0;
+    height: var(--height);
+  }
+}
+/*End Button 3*/
+
+/*Button 4*/
+.btn4{
+
+}
+/*End Buttom 4*/

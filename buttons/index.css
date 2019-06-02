@@ -53,12 +53,15 @@ a{
   z-index: 1;
   margin: 15px 0;
 }
+.btn:after,
+.btn:before{
+  content: "";
+  position: absolute;
+}
 /* End Default */
 
 /* Button 1 */
 .btn1:after{
-  content: "";
-  position: absolute;
   width: 2rem;
   height: 2rem;
   background-color: var(--green);
@@ -98,8 +101,6 @@ a{
   color: var(--white);
 }
 .btn2:after{
-  content: "";
-  position: absolute;
   background-color: var(--white);
   width: calc(var(--width) * 1.5);
   left: calc(var(--width) + 200px);
@@ -148,8 +149,6 @@ a{
   color: var(--black);
 }
 .btn3:after{
-  content: "";
-  position: absolute;
   width: var(--width);
   height: 1px;
   background-color: var(--green);
@@ -180,7 +179,35 @@ a{
 /*End Button 3*/
 
 /*Button 4*/
-.btn4{
-
+.btn4:after{
+  width: var(--width);
+  height: var(--height);
+  border-top: 1px solid var(--green);
+  border-bottom: 1px solid var(--green);
+  left: 50%; 
+  top: 50%;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+}
+.btn4:hover:after{
+  animation: toCenter2 .8s both;
+}
+.btn4:hover{
+  color: var(--white);
+  transition: color .2s;
+  transition-delay: .6s;
+}
+@keyframes toCenter2 {
+  50%{
+    height: 0px;
+  }
+  75%{
+    height: 0px;
+    background-color: inherit;
+  }
+  100%{
+    height: var(--height);
+    background-color: var(--green);
+  }
 }
 /*End Buttom 4*/

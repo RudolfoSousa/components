@@ -42,7 +42,7 @@ a{
   display: block;
   text-align: center;
   overflow: hidden;
-  color: var(--red);
+  color: var(--black);
   z-index: 1;
   margin: 15px 0;
 }
@@ -64,14 +64,12 @@ a{
 
 .btn:hover{
   color: var(--white);
-  border: 1px solid var(--red);
-  transition: border .1s;
-  transition-delay: .5s;
+  transition: color .1s;
+  transition-delay: .4s;
 }
 
 .btn:hover:after{
   animation: fromLeft .8s both;
-  border: 1px solid currentColor;
 }
 
 @keyframes fromLeft {

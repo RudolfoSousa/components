@@ -20,6 +20,7 @@ function etapas(){
 			left: "100%"
 		}, 500);
 
+		$(".passos .passos-content").addClass("etapa-1");
 		$(".passos .passos-content .passo:nth-child(2) .passo-content").addClass("active");
 	})
 
@@ -37,6 +38,7 @@ function etapas(){
 			left: "15px"
 		}, 500);
 
+		$(".passos .passos-content").addClass("etapa-2");
 		$(".passos .passos-content .passo:nth-child(3) .passo-content").addClass("active");
 	})
 

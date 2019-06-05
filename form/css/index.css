@@ -81,7 +81,7 @@ body{
 .passos .passos-content .passo .passo-content:after{
 	width: 100%;
 	height: 100%;
-	background-color: red;
+	background-color: var(--red);
 	left: -50%;
 	top: 50%;
 	border-radius: 50%;
@@ -89,6 +89,7 @@ body{
 }
 .passos .passos-content .passo .passo-content.active:after{
 	animation: toCenter .8s both;
+	animation-delay: .4s;
 }
 
 @keyframes toCenter {
@@ -106,7 +107,7 @@ body{
 	}
 }
 
-.passos .passos-content:after{
+.passos .passos-content:before{
 	width: 80%;
 	height: 6px;
 	border: 2px solid #000000;
@@ -117,13 +118,25 @@ body{
 	top: 68%;
 }
 
-.passos .passos-content .passo .passo-content:before{
-	width: var(--width-passo);
-	height: var(--height-passo);
-	background-color: #DB504A;
-	border-radius: 50%;
-	top: 50%;
-	left: -50%;	
+.passos .passos-content:after{
+	transform: translate(0, -50%);
+	width: 0%;
+	height: 6px;
+	border: 2px solid #000000;
+	background-color: var(--red);
+	z-index: 1;
+	left: 50px;
+	top: 68%;
+}
+
+.passos .passos-content.etapa-1:after{
+	width: 40%;
+	transition: .8s;
+}
+
+.passos .passos-content.etapa-2:after{
+	width: 80%;
+	transition: .8s;
 }
 
 form{

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="css/index.css">
+  </head>
+  <body>
+    <div class="formulario">
+      <div class="form-content">
+        <div class="passos">
+          <div class="passos-content">
+            <div class="passo">
+              <div class="passo-title">
+                Dados Pessoais
+              </div>
+              <div class="passo-content active">
+                <span>1</span>
+              </div>
+            </div>
+            <div class="passo">
+              <div class="passo-title">
+                Dados de Endereço
+              </div>
+              <div class="passo-content">
+                <span>2</span>
+              </div>
+            </div>
+            <div class="passo">
+              <div class="passo-title">
+                Dados Gerais da Compra
+              </div>
+              <div class="passo-content">
+                <span>3</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form>
+          <div class="etapa1">
+            <p class="title">Dados Pessoais</p>
+            <div class="form-control">
+              <label>
+                Nome
+                <input type="text">
+              </label>
+              <div class="form-control">
+                <label for="mail">Email</label>
+                <input id="mail" type="text">
+              </div>
+            </div>
+            <button>Avançar</button>
+          </div>
+          <div class="etapa2">
+            <p class="title">Dados de Endereço</p>
+            <div class="form-control">
+              <label>
+                Rua
+                <input type="text">
+              </label>
+              <div class="form-control">
+                <label for="bairro">Bairro</label>
+                <input id="bairro" type="text">
+              </div>
+            </div>
+            <button>Avançar</button>
+          </div>
+          <div class="etapa3">
+            <p class="title">Dados Gerais da Compra</p>
+            <div class="form-control">
+              <label>
+                Valor
+                <input type="text">
+              </label>
+              <div class="form-control">
+                <label for="quantidade">Quantidade</label>
+                <input id="quantidade" type="text">
+              </div>
+            </div> 
+            <button>Enviar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
